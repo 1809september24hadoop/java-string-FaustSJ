@@ -71,14 +71,6 @@ public class JavaStringSolutions implements JavaString {
 
 	@Override
 	public void time(StringBuilder builder, StringBuffer buffer) throws IllegalArgumentException {
-		// TODO Auto-generated method stub
-		/**
-		 * 3. Measure which is faster appending characters.
-		 * 
-		 * Hint: Use System.currentTimeMillis().
-		 * 
-		 * @throws IllegalArgumentException if builder or buffer is null.
-		**/
 		//make sure they didn't send a null builder or buffer
 		try {
 			if((builder==null)||(buffer==null)){
@@ -86,17 +78,32 @@ public class JavaStringSolutions implements JavaString {
 			}
 		}catch (IllegalArgumentException iae) {
 			LOGGER.error("Cannot append null!");
+		}  
+		
+		//run and time Builder
+		long startTimeBuilder = System.currentTimeMillis();
+		for(int i = 0; i<1000000; i++) {
+			builder.append("meowth");
+		}
+		long endTimeBuilder =  System.currentTimeMillis();
+		
+		//run and time Buffer
+		long startTimeBuffer = System.currentTimeMillis();
+		for(int i = 0; i<1000000; i++) {
+			buffer.append("meowth");
+		}
+		long endTimeBuffer =  System.currentTimeMillis();
+		
+		//compare the times and print the results
+		if((endTimeBuilder-startTimeBuilder)>(endTimeBuffer-startTimeBuffer)) {
+			LOGGER.info("Buffer was faster than Builder by " + ((endTimeBuilder-startTimeBuilder)-(endTimeBuffer-startTimeBuffer)) + "ms");
+		}else {
+			LOGGER.info("Builder was faster than Buffer by " + ((endTimeBuffer-startTimeBuffer)-(endTimeBuilder-startTimeBuilder)) + "ms");
 		}
 	}
 
 	@Override
 	public boolean itContains(String string, String contains) throws IllegalArgumentException {
-		// TODO Auto-generated method stub
-		/**
-		 * 4. Find if a word exist within a String.
-		 * 
-		 * @throws IllegalArgumentException if string is null.
-		 */
 		//make sure they didn't send an empty or null string
 		try {
 			if((string==null)||(string.isEmpty())){
@@ -106,12 +113,7 @@ public class JavaStringSolutions implements JavaString {
 			LOGGER.error("Cannot search within an empty string!");
 		}
 		
-		//char[] original = string.toCharArray();
-		//char[] modified = new char[original.length-1];
-		
-		
-		
-		return false;
+		return string.contains(contains); //since String IS A CharSequence
 	}
 
 	@Override
@@ -151,14 +153,6 @@ public class JavaStringSolutions implements JavaString {
 
 	@Override
 	public String delete(String string, char c) throws IllegalArgumentException {
-		// TODO Auto-generated method stub
-		/**
-		 * 6. Delete the given character if it exists within the given String.
-		 * 
-		 * @return the new version of the String with the character deleted everywhere.
-		 * 
-		 * @throws IllegalArgumentException if the string is null.
-		 */
 		//make sure they didn't send an empty or null string
 		try {
 			if((string==null)||(string.isEmpty())){
@@ -188,15 +182,6 @@ public class JavaStringSolutions implements JavaString {
 
 	@Override
 	public String upperLower(String string) throws IllegalArgumentException {
-		// TODO Auto-generated method stub
-		/**
-		 * 7. Transform the left half of the given String into upper case and the right half
-		 * into lower case.
-		 * 
-		 * @return The new version of the String.
-		 * 
-		 * @throws IllegalArgumentException if the string is null or it's length is not even.
-		 */
 		//make sure they didn't send an empty, null, or uneven string
 		try {
 			if((string==null)||(string.isEmpty())||((string.length()%2)!=0)){
@@ -206,7 +191,10 @@ public class JavaStringSolutions implements JavaString {
 			LOGGER.error("Cannot modify an empty, null, or uneven string!");
 		}
 		
-		return null;
+		String firstHalf = string.substring(0, (string.length()/2)); //the endIndex is exclusive!!
+		String secondHalf = string.substring(string.length()/2);
+		
+		return firstHalf.toUpperCase().concat(secondHalf.toLowerCase());
 	}
 	
 	public static void main(String[] args) {
@@ -220,6 +208,14 @@ public class JavaStringSolutions implements JavaString {
 		
 		String str = jss.delete("asldksjfnsdn", 'd');
 		LOGGER.info(str + " of length " + str.length()); //aslksjfnsn of length 10
+		
+		StringBuilder sbl = new StringBuilder();
+		StringBuffer sbf = new StringBuffer();
+		jss.time(sbl, sbf);
+		
+		LOGGER.info(jss.upperLower("aSdFgEasIN")); //ASDFGeasin
+		
+		LOGGER.info(jss.itContains("ImHappy Go", "ppy Go")); //true
 	}
 
 }

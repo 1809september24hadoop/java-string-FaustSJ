@@ -9,3 +9,44 @@
 2018-10-31 14:59:51 INFO  JavaStringSolutions:220 - oloY
 2018-10-31 14:59:51 INFO  JavaStringSolutions:222 - adfhjklss
 2018-10-31 14:59:51 INFO  JavaStringSolutions:225 - aslksjfnsn of length 10
+2018-11-01 09:03:18 INFO  JavaStringSolutions:215 - 586213
+2018-11-01 09:03:18 INFO  JavaStringSolutions:217 - oloY
+2018-11-01 09:03:18 INFO  JavaStringSolutions:219 - adfhjklss
+2018-11-01 09:03:18 INFO  JavaStringSolutions:222 - aslksjfnsn of length 10
+2018-11-02 09:06:12 INFO  JavaStringSolutions:228 - 586213
+2018-11-02 09:06:12 INFO  JavaStringSolutions:230 - oloY
+2018-11-02 09:06:12 INFO  JavaStringSolutions:232 - adfhjklss
+2018-11-02 09:06:12 INFO  JavaStringSolutions:235 - aslksjfnsn of length 10
+2018-11-02 09:06:12 INFO  JavaStringSolutions:107 - Buffer was faster than Builder by 55ms
+2018-11-02 09:09:40 INFO  JavaStringSolutions:230 - 586213
+2018-11-02 09:09:40 INFO  JavaStringSolutions:232 - oloY
+2018-11-02 09:09:40 INFO  JavaStringSolutions:234 - adfhjklss
+2018-11-02 09:09:40 INFO  JavaStringSolutions:237 - aslksjfnsn of length 10
+2018-11-02 09:09:41 INFO  JavaStringSolutions:97 - Builder took 78
+2018-11-02 09:09:41 INFO  JavaStringSolutions:105 - Buffer took 104
+2018-11-02 09:09:41 INFO  JavaStringSolutions:111 - Builder was faster than Buffer by 26ms
+2018-11-02 10:32:21 INFO  JavaStringSolutions:226 - 586213
+2018-11-02 10:32:21 INFO  JavaStringSolutions:228 - oloY
+2018-11-02 10:32:21 INFO  JavaStringSolutions:230 - adfhjklss
+2018-11-02 10:32:21 INFO  JavaStringSolutions:233 - aslksjfnsn of length 10
+2018-11-02 10:32:21 INFO  JavaStringSolutions:99 - Buffer was faster than Builder by 40ms
+2018-11-02 10:32:21 INFO  JavaStringSolutions:239 - aSdFEasIN
+2018-11-02 10:33:33 INFO  JavaStringSolutions:224 - 586213
+2018-11-02 10:33:33 INFO  JavaStringSolutions:226 - oloY
+2018-11-02 10:33:33 INFO  JavaStringSolutions:228 - adfhjklss
+2018-11-02 10:33:33 INFO  JavaStringSolutions:231 - aslksjfnsn of length 10
+2018-11-02 10:33:33 INFO  JavaStringSolutions:99 - Buffer was faster than Builder by 18ms
+2018-11-02 10:33:33 INFO  JavaStringSolutions:237 - ASDFeasin
+2018-11-02 10:34:14 INFO  JavaStringSolutions:224 - 586213
+2018-11-02 10:34:14 INFO  JavaStringSolutions:226 - oloY
+2018-11-02 10:34:14 INFO  JavaStringSolutions:228 - adfhjklss
+2018-11-02 10:34:14 INFO  JavaStringSolutions:231 - aslksjfnsn of length 10
+2018-11-02 10:34:14 INFO  JavaStringSolutions:99 - Buffer was faster than Builder by 15ms
+2018-11-02 10:34:14 INFO  JavaStringSolutions:237 - ASDFGeasin
+2018-11-02 10:41:42 INFO  JavaStringSolutions:209 - 586213
+2018-11-02 10:41:42 INFO  JavaStringSolutions:211 - oloY
+2018-11-02 10:41:42 INFO  JavaStringSolutions:213 - adfhjklss
+2018-11-02 10:41:42 INFO  JavaStringSolutions:216 - aslksjfnsn of length 10
+2018-11-02 10:41:42 INFO  JavaStringSolutions:101 - Builder was faster than Buffer by 21ms
+2018-11-02 10:41:42 INFO  JavaStringSolutions:222 - ASDFGeasin
+2018-11-02 10:41:42 INFO  JavaStringSolutions:224 - true
